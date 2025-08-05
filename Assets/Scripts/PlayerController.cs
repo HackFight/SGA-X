@@ -37,6 +37,9 @@ public class PlayerController : MonoBehaviour
 
     //Grab
     [SerializeField] GameObject grab;
+    GrabScript grabScript;
+    Rigidbody2D grabRb;
+    [SerializeField] float grabSpeed;
     [Range(0.0f, 10.0f), SerializeField] float maxGrabDistance;
     [Range(0.0f, 10.0f), SerializeField] float minGrabDistance;
 
@@ -52,12 +55,14 @@ public class PlayerController : MonoBehaviour
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
         rb = GetComponent<Rigidbody2D>();
+
+        grabScript = grab.GetComponent<GrabScript>();
+        grabRb = grab.GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
         ProcessInput();
-        UpdateGrab();
     }
 
     private void FixedUpdate()
@@ -87,6 +92,8 @@ public class PlayerController : MonoBehaviour
         float finalFallSpeed = endedJumpEarly && rb.linearVelocityY > 0 ? fallSpeed * jumpEndEarlyModifier : fallSpeed;
         rb.linearVelocityY -= finalFallSpeed * Time.deltaTime;
         rb.linearVelocityY = Mathf.Clamp(rb.linearVelocityY, -maxFallSpeed, 1000.0f);
+
+        UpdateGrab();
     }
 
     void ProcessInput()
@@ -113,12 +120,12 @@ public class PlayerController : MonoBehaviour
         if (lookAction.ReadValue<Vector2>().magnitude > 0) look = lookAction.ReadValue<Vector2>();
         else look = look.normalized / 100.0f;
         Vector2 controllerGrabPos = look.magnitude * maxGrabDistance > minGrabDistance ? look * maxGrabDistance : look.normalized * minGrabDistance;
-
-        grab.transform.localPosition = isMouse ? mouseGrabPos : controllerGrabPos;
+        Vector2 dif = ((Vector2)transform.position + (isMouse ? mouseGrabPos : controllerGrabPos)) - (Vector2)grab.transform.position;
+        grabRb.MovePosition((Vector2)grab.transform.position + dif * Time.fixedDeltaTime * grabSpeed);
 
         if(fireAction.IsPressed())
         {
-            Grab();
+            grabScript.Activate();
             Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);
             grab.GetComponent<SpriteRenderer>().color = Color.green;
         }
@@ -127,11 +134,6 @@ public class PlayerController : MonoBehaviour
             Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
             grab.GetComponent<SpriteRenderer>().color = Color.white;
         }
-    }
-
-    void Grab()
-    {
-
     }
 
     private Vector2 ClampMagnitude(Vector2 v, float max, float min)
