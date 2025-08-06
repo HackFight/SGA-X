@@ -19,10 +19,9 @@ public class GrabScript : MonoBehaviour
         //Remove grabable collider from list
         if (collision.CompareTag("Grabbable"))
         {
-            Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
-            if (!rb.IsSleeping())
+            if (!collision.GetComponent<Grabbable>().untouched)
             {
-                rb.gravityScale = 1.0f;
+                collision.GetComponent<Rigidbody2D>().gravityScale = 1.0f;
             }
             grabbeds.Remove(collision.gameObject);
         }
@@ -35,6 +34,7 @@ public class GrabScript : MonoBehaviour
         {
             Grabbable script = grabbable.GetComponent<Grabbable>();
             Rigidbody2D rb = grabbable.GetComponent<Rigidbody2D>();
+            script.untouched = false;
             rb.gravityScale = 0.0f;
             Vector2 dif = transform.position - grabbable.transform.position;
             rb.MovePosition((Vector2)rb.transform.position + dif * Time.fixedDeltaTime * script.grabSpeed);
