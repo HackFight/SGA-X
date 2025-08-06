@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class GrabScript : MonoBehaviour
 {
@@ -19,12 +19,6 @@ public class GrabScript : MonoBehaviour
         //Remove grabable collider from list
         if (collision.CompareTag("Grabbable"))
         {
-            /*
-            if (!collision.GetComponent<Grabbable>().untouched)
-            {
-                collision.GetComponent<Rigidbody2D>().gravityScale = 1.0f;
-            }
-            */
             grabbeds.Remove(collision.gameObject);
         }
     }
