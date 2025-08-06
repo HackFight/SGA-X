@@ -126,12 +126,12 @@ public class PlayerController : MonoBehaviour
         if(fireAction.IsPressed())
         {
             grabScript.Activate();
-            Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);
+            //Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);
             grab.GetComponent<SpriteRenderer>().color = Color.green;
         }
         else
         {
-            Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
+            //Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
             grab.GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
