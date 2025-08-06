@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Grabbable : MonoBehaviour
 {
-    public bool untouched;
+    public bool untouched = true;
     public float grabSpeed;
 
     Rigidbody2D rb;
@@ -10,6 +10,6 @@ public class Grabbable : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.Sleep();
+        if(untouched) rb.Sleep();
     }
 }
