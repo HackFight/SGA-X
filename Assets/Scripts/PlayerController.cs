@@ -31,7 +31,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float maxFallSpeed;
     [SerializeField] float jumpEndEarlyModifier;
     [SerializeField] float coyoteTime;
-    private float timeLeftGround;
+    [SerializeField] float jumpBufferTime;
+    float timeLeftGround;
+    bool justGrounded;
+    float timeSinceLastJumpRequest = -10.0f;
     [SerializeField] LayerMask groundRaycastLayerMask;
     [SerializeField] float groundRaycastDistance;
 
@@ -68,7 +71,12 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         //Check
-        isGrounded = Physics2D.Raycast(transform.position, -Vector2.up, groundRaycastDistance, groundRaycastLayerMask) && rb.linearVelocityY <= 0;
+        if (Physics2D.Raycast(transform.position, -Vector2.up, groundRaycastDistance, groundRaycastLayerMask) && rb.linearVelocityY <= 0 && !isGrounded)
+        {
+            isGrounded = true;
+            justGrounded = true;
+        }
+        else isGrounded = Physics2D.Raycast(transform.position, -Vector2.up, groundRaycastDistance, groundRaycastLayerMask);
         if (!isGrounded && !airborne)
         {
             airborne = true;
@@ -78,11 +86,12 @@ public class PlayerController : MonoBehaviour
         {
             airborne = false;
         }
+        if (!justGrounded && hasReleased) timeSinceLastJumpRequest = -10.0f;
 
             //Move
             rb.linearVelocityX = moveAction.ReadValue<Vector2>().x * speed;
 
-        if (jumpAction.IsPressed() && (isGrounded || timeLeftGround + coyoteTime > Time.time) && hasReleased)
+        if ((jumpAction.IsPressed() || timeSinceLastJumpRequest + jumpBufferTime >= Time.time) && (isGrounded || timeLeftGround + coyoteTime >= Time.time) && hasReleased)
         {
             isGrounded = false; hasReleased = false;
             rb.linearVelocityY = jumpSpeed;
@@ -93,6 +102,7 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocityY -= finalFallSpeed * Time.deltaTime;
         rb.linearVelocityY = Mathf.Clamp(rb.linearVelocityY, -maxFallSpeed, 1000.0f);
 
+        justGrounded = false;
         UpdateGrab();
     }
 
@@ -107,16 +117,21 @@ public class PlayerController : MonoBehaviour
             if (deltaAction.ReadValue<Vector2>().magnitude > detectThreshold) isMouse = true;
         }
 
-        if(!jumpAction.IsPressed() && isGrounded)
+        if(!jumpAction.IsPressed() && (isGrounded || rb.linearVelocityY < 0))
         {
             hasReleased = true;
+        }
+
+        if(jumpAction.IsPressed())
+        {
+            timeSinceLastJumpRequest = Time.time;
         }
     }
 
     void UpdateGrab()
     {
         Vector2 mouseWorldPos = mainCamera.ScreenToWorldPoint(pointAction.ReadValue<Vector2>()) - transform.position;
-        Vector2 mouseGrabPos = ClampMagnitude(mouseWorldPos, maxGrabDistance, minGrabDistance);
+        Vector2 mouseGrabPos = Vector2.ClampMagnitude(mouseWorldPos, maxGrabDistance);
         if (lookAction.ReadValue<Vector2>().magnitude > 0) look = lookAction.ReadValue<Vector2>();
         else look = look.normalized / 100.0f;
         Vector2 controllerGrabPos = look.magnitude * maxGrabDistance > minGrabDistance ? look * maxGrabDistance : look.normalized * minGrabDistance;
@@ -134,13 +149,5 @@ public class PlayerController : MonoBehaviour
             //Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
             grab.GetComponent<SpriteRenderer>().color = Color.white;
         }
-    }
-
-    private Vector2 ClampMagnitude(Vector2 v, float max, float min)
-    {
-        double sm = v.sqrMagnitude;
-        if (sm > (double)max * (double)max) return v.normalized * max;
-        else if (sm < (double)min * (double)min) return v.normalized * min;
-        return v;
     }
 }
