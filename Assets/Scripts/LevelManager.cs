@@ -5,6 +5,7 @@ public class LevelManager : MonoBehaviour
 {
     InputAction menuAction;
     ItemManager itemManager;
+    WallManager wallManager;
 
     [SerializeField] PlayerController player;
     public int currentLevel = 0;
@@ -15,6 +16,7 @@ public class LevelManager : MonoBehaviour
     {
         menuAction = InputSystem.actions.FindAction("Menu");
         itemManager = GetComponent<ItemManager>();
+        wallManager = GetComponent<WallManager>();
 
         lastReloadTime = Time.time;
     }
@@ -24,8 +26,9 @@ public class LevelManager : MonoBehaviour
         if (menuAction.IsPressed() && Time.time > lastReloadTime + reloadCooldown)
         {
             lastReloadTime = Time.time;
-            itemManager.ReloadList(currentLevel);
             player.Respawn();
+            itemManager.ReloadList(currentLevel);
+            wallManager.DisableList(currentLevel);
         }
     }
 }
