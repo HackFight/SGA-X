@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5494662882577671216}
   - component: {fileID: 3498690232029297103}
   - component: {fileID: 6917833186414939637}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grab
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -363,7 +363,7 @@ Transform:
   m_GameObject: {fileID: 6535591605021065235}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 23.45, y: 5.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -502,21 +502,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984df81bec3175943af59a93bae14c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 14
-  jumpSpeed: 20
-  fallSpeed: 40
+  speed: 10
+  jumpSpeed: 19
+  fallSpeed: 39
   maxFallSpeed: 28
-  jumpEndEarlyModifier: 6
+  jumpEndEarlyModifier: 3
   coyoteTime: 0.1
-  jumpBufferTime: 1
+  jumpBufferTime: 0.5
   groundRaycastLayerMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 311
   groundRaycastDistance: 1.1
   grab: {fileID: 487899969630157644}
-  grabSpeed: 10
-  maxGrabDistance: 5
-  minGrabDistance: 1.5
+  grabSpeed: 8
+  maxGrabDistance: 3.5
+  minGrabDistance: 1
 --- !u!1001 &18663053791218760
 PrefabInstance:
   m_ObjectHideFlags: 0
