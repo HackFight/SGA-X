@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: 19e698fb5b5c4174a9f7129592821b2f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 923430357362471181
+    second: Panneau 100 x 100_0
+  - first:
+      213: 7801926159461863912
+    second: Panneau 100 x 100_1
+  - first:
+      213: 1315589644426476482
+    second: Panneau 100 x 100_2
+  - first:
+      213: 773622574723688598
+    second: Panneau 100 x 100_3
+  - first:
+      213: -593158204686943247
+    second: Panneau 100 x 100_4
+  - first:
+      213: 8626160738186618335
+    second: Panneau 100 x 100_5
+  - first:
+      213: 1754216502302100386
+    second: Panneau 100 x 100_6
+  - first:
+      213: 2186938794461374394
+    second: Panneau 100 x 100_7
+  - first:
+      213: 5481517289050898015
+    second: Panneau 100 x 100_8
+  - first:
+      213: -6149639012733909857
+    second: Panneau 100 x 100_9
+  - first:
+      213: -5340702677025632488
+    second: Panneau 100 x 100_10
+  - first:
+      213: 5672584686748558058
+    second: Panneau 100 x 100_11
+  - first:
+      213: -8164931135720995799
+    second: Panneau 100 x 100_12
+  - first:
+      213: 3428366335695840437
+    second: Panneau 100 x 100_13
+  - first:
+      213: -6795843309317363448
+    second: Panneau 100 x 100_14
+  - first:
+      213: -1502303277238346416
+    second: Panneau 100 x 100_15
+  - first:
+      213: -8868469708504456143
+    second: Panneau 100 x 100_16
+  - first:
+      213: 2095809904628223613
+    second: Panneau 100 x 100_17
+  - first:
+      213: -6560917944710244461
+    second: Panneau 100 x 100_18
+  - first:
+      213: -1151504731885402011
+    second: Panneau 100 x 100_19
+  - first:
+      213: -7257387663946022976
+    second: Panneau 100 x 100_20
+  - first:
+      213: 8807288551459806580
+    second: Panneau 100 x 100_21
+  - first:
+      213: 8570403120124223253
+    second: Panneau 100 x 100_22
+  - first:
+      213: -4395825603228941052
+    second: Panneau 100 x 100_23
+  - first:
+      213: 3197796074054719785
+    second: Panneau 100 x 100_24
+  - first:
+      213: -7098416897291532211
+    second: Panneau 100 x 100_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Panneau 100 x 100_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01f669740fa0dc00800000000000000
+      internalID: 923430357362471181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panneau 100 x 100_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e15d827182064c60800000000000000
+      internalID: 7801926159461863912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d60bcb670a0047d48a426e6827acc2fe
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":2.0},"gridSpriteSize":{"x":100.0,"y":100.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Panneau 100 x 100_0: 923430357362471181
+      Panneau 100 x 100_1: 7801926159461863912
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
