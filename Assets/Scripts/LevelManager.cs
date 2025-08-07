@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour
     InputAction menuAction;
     ItemManager itemManager;
     WallManager wallManager;
+    ScriptedAnimations animationHandler;
 
     [SerializeField] PlayerController player;
     public int currentLevel = 0;
@@ -17,18 +18,23 @@ public class LevelManager : MonoBehaviour
         menuAction = InputSystem.actions.FindAction("Menu");
         itemManager = GetComponent<ItemManager>();
         wallManager = GetComponent<WallManager>();
+        animationHandler = GetComponent<ScriptedAnimations>();
 
         lastReloadTime = Time.time;
     }
 
     void Update()
     {
+        
         if (menuAction.IsPressed() && Time.time > lastReloadTime + reloadCooldown)
         {
+            /*
             lastReloadTime = Time.time;
             player.Respawn();
             itemManager.ReloadList(currentLevel);
             wallManager.DisableList(currentLevel);
+            */
+            animationHandler.PlayCutscene(0);
         }
     }
 }

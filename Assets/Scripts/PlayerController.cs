@@ -47,6 +47,9 @@ public class PlayerController : MonoBehaviour
     [Range(0.0f, 10.0f), SerializeField] float maxGrabDistance;
     [Range(0.0f, 10.0f), SerializeField] float minGrabDistance;
 
+    //Animations
+    public bool cutscene;
+
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
@@ -72,6 +75,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (cutscene) return;
         //Check
         if (Physics2D.Raycast(transform.position, -Vector2.up, groundRaycastDistance, groundRaycastLayerMask) && rb.linearVelocityY <= 0 && !isGrounded)
         {
@@ -89,9 +93,9 @@ public class PlayerController : MonoBehaviour
             airborne = false;
         }
         if (!justGrounded && hasReleased) timeSinceLastJumpRequest = -10.0f;
-
-            //Move
-            rb.linearVelocityX = moveAction.ReadValue<Vector2>().x * speed;
+        
+        //Move
+        rb.linearVelocityX = moveAction.ReadValue<Vector2>().x * speed;
 
         if ((jumpAction.IsPressed() || timeSinceLastJumpRequest + jumpBufferTime >= Time.time) && (isGrounded || timeLeftGround + coyoteTime >= Time.time) && hasReleased)
         {
