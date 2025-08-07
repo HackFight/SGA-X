@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     float timeSinceLastJumpRequest = -10.0f;
     [SerializeField] LayerMask groundRaycastLayerMask;
     [SerializeField] float groundRaycastDistance;
+    Vector2 startPos;
 
     //Grab
     [SerializeField] GameObject grab;
@@ -58,6 +59,7 @@ public class PlayerController : MonoBehaviour
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
         rb = GetComponent<Rigidbody2D>();
+        startPos = transform.position;
 
         grabScript = grab.GetComponent<GrabScript>();
         grabRb = grab.GetComponent<Rigidbody2D>();
@@ -149,5 +151,10 @@ public class PlayerController : MonoBehaviour
             //Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
             grab.GetComponent<SpriteRenderer>().color = Color.white;
         }
+    }
+
+    public void Respawn()
+    {
+        transform.position = startPos;
     }
 }

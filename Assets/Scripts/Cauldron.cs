@@ -3,33 +3,55 @@ using System.Collections.Generic;
 
 public class Cauldron : MonoBehaviour
 {
-    List<GameObject> ingredients = new List<GameObject>();
+    [SerializeField] List<Craft> crafts = new List<Craft>();
+    List<int> ingredients = new List<int>();
+    LevelManager levelManager;
+    int currentLevel;
+
+    private void Start()
+    {
+        levelManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<LevelManager>();
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Grabbable"))
+        if (collision.GetComponent<Item>())
         {
-            ingredients.Add(collision.gameObject);
+            ingredients.Add(collision.gameObject.GetComponent<Item>().ID);
         }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Grabbable"))
+        if (collision.GetComponent<Item>())
         {
-            ingredients.Remove(collision.gameObject);
+            ingredients.Remove(collision.gameObject.GetComponent<Item>().ID);
         }
     }
 
     void Update()
     {
-        if (ingredients.Count > 3)
+        currentLevel = levelManager.currentLevel;
+
+        if (ingredients.Count >= 3)
         {
+            Craft();
         }
     }
 
     void Craft()
     {
-
+        if (ingredients.Contains(crafts[currentLevel].ingredient1) && ingredients.Contains(crafts[currentLevel].ingredient2) && ingredients.Contains(crafts[currentLevel].ingredient3))
+        {
+            Debug.Log("YOU WON!");
+        }
     }
+}
+
+[System.Serializable]
+public struct Craft
+{
+    public int ingredient1;
+    public int ingredient2;
+    public int ingredient3;
 }
