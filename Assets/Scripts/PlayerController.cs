@@ -75,7 +75,15 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (cutscene) return;
+        if (cutscene)
+        {
+            grab.SetActive(false);
+            return;
+        }
+        else
+        {
+            grab.SetActive(true);
+        }
         //Check
         if (Physics2D.Raycast(transform.position, -Vector2.up, groundRaycastDistance, groundRaycastLayerMask) && rb.linearVelocityY <= 0 && !isGrounded)
         {

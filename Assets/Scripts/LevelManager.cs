@@ -13,6 +13,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] float reloadCooldown;
     float lastReloadTime;
 
+    public bool levelWon;
+
     void Start()
     {
         menuAction = InputSystem.actions.FindAction("Menu");
@@ -37,4 +39,18 @@ public class LevelManager : MonoBehaviour
             animationHandler.PlayCutscene(0);
         }
     }
+
+    public void StartLevel()
+    {
+        itemManager.ReloadList(currentLevel);
+        wallManager.DisableList(currentLevel);
+        player.cutscene = false;
+    }
+
+    public void EndLevel(bool win)
+    {
+        levelWon = win;
+        animationHandler.PlayCutscene(currentLevel);
+        currentLevel++;
+    }  
 }
