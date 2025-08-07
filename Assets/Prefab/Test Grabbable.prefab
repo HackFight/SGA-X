@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   untouched: 0
-  grabSpeed: 50
+  grabSpeed: 40
 --- !u!61 &7450679348131755056
 BoxCollider2D:
   m_ObjectHideFlags: 0
