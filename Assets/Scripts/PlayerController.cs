@@ -21,17 +21,18 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer;
     [SerializeField] GameObject visuals;
     [SerializeField] GameObject visualsFlipped;
+    Animator playerAnimator;
 
     //Camera
     Camera mainCamera;
 
     //Movement
     Rigidbody2D rb;
-    [SerializeField] float speed;
+    public float speed;
     bool airborne;
     bool isGrounded;
     bool endedJumpEarly;
-    [SerializeField] float jumpSpeed;
+    public float jumpSpeed;
     [SerializeField] float fallSpeed;
     [SerializeField] float maxFallSpeed;
     [SerializeField] float jumpEndEarlyModifier;
@@ -70,6 +71,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         startPos = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        playerAnimator = GetComponent<Animator>();
 
         grabScript = grab.GetComponent<GrabScript>();
         grabRb = grab.GetComponent<Rigidbody2D>();
@@ -81,15 +83,15 @@ public class PlayerController : MonoBehaviour
         ProcessInput();
         if(rb.linearVelocityX > 0.1f)
         {
-            spriteRenderer.flipX = true;
-            visuals.SetActive(false);
-            visualsFlipped.SetActive(true);
+            LookRight();
         }
         else if (rb.linearVelocityX < -0.1f)
         {
-            spriteRenderer.flipX = false;
-            visuals.SetActive(true);
-            visualsFlipped.SetActive(false);
+            LookLeft();
+        }
+        else
+        {
+            playerAnimator.SetBool("Walking", false);
         }
     }
 
@@ -188,5 +190,20 @@ public class PlayerController : MonoBehaviour
     public void Respawn()
     {
         transform.position = startPos;
+    }
+
+    public void LookRight()
+    {
+        playerAnimator.SetBool("Walking", true);
+        spriteRenderer.flipX = true;
+        visuals.SetActive(false);
+        visualsFlipped.SetActive(true);
+    }
+    public void LookLeft()
+    {
+        playerAnimator.SetBool("Walking", true);
+        spriteRenderer.flipX = false;
+        visuals.SetActive(true);
+        visualsFlipped.SetActive(false);
     }
 }

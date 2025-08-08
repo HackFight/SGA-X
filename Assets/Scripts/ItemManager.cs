@@ -12,6 +12,17 @@ public class ItemManager : MonoBehaviour
             itemLists[i].list[j].Init();
         }
     }
+
+    public void ReloadAll()
+    {
+        foreach (serializableGrabbableList itemList in itemLists)
+        {
+            foreach (Grabbable item in itemList.list)
+            {
+                item.Init();
+            }
+        }
+    }
 }
 
 [System.Serializable]

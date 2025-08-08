@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9830776154f25b041a3f586d90d46872
+guid: d7d6d16b733ceb542a4d2e6c80ee699c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1605413446329090501
-    second: Potion_de_transparence_0
+      213: -2324763549778601606
+    second: Potion_de_victoire_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Potion_de_transparence_0
+      name: Potion_de_victoire_0
       rect:
         serializedVersion: 2
         x: 4
         y: 0
-        width: 25
+        width: 20
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c1c41a0603974610800000000000000
-      internalID: 1605413446329090501
+      spriteID: a799bac5ed7ccbfd0800000000000000
+      internalID: -2324763549778601606
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Potion_de_transparence_0: 1605413446329090501
+      Potion_de_victoire_0: -2324763549778601606
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
