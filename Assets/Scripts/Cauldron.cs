@@ -1,16 +1,27 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Cauldron : MonoBehaviour
 {
     [SerializeField] List<Craft> crafts = new List<Craft>();
     List<int> ingredients = new List<int>();
     LevelManager levelManager;
-    int currentLevel;
+    ItemManager itemManager;
+    float timeSinceCraftStart;
+    [SerializeField] float craftCooldown;
+    public bool cantCraft;
+
+    //UI
+    [SerializeField] RawImage ingredient1;
+    [SerializeField] RawImage ingredient2;
+    [SerializeField] RawImage ingredient3;
+    [SerializeField] List<Recipe> recipes = new List<Recipe>();
 
     private void Start()
     {
         levelManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<LevelManager>();
+        itemManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<ItemManager>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -31,19 +42,32 @@ public class Cauldron : MonoBehaviour
 
     void Update()
     {
-        currentLevel = levelManager.currentLevel;
+        //Update recipe book
+        ingredient1.texture = recipes[levelManager.currentLevel].ingredient1;
+        ingredient2.texture = recipes[levelManager.currentLevel].ingredient2;
+        ingredient3.texture = recipes[levelManager.currentLevel].ingredient3;
 
-        if (ingredients.Count >= 3)
+        if (ingredients.Count == 3 && timeSinceCraftStart + craftCooldown < Time.time)
         {
+            timeSinceCraftStart = Time.time;
             Craft();
         }
     }
 
     void Craft()
     {
-        if (ingredients.Contains(crafts[currentLevel].ingredient1) && ingredients.Contains(crafts[currentLevel].ingredient2) && ingredients.Contains(crafts[currentLevel].ingredient3))
+        if (!cantCraft)
         {
-            Debug.Log("YOU WON!");
+            if (ingredients.Contains(crafts[levelManager.currentLevel].ingredient1) && ingredients.Contains(crafts[levelManager.currentLevel].ingredient2) && ingredients.Contains(crafts[levelManager.currentLevel].ingredient3))
+            {
+                levelManager.EndLevel(true);
+                itemManager.ReloadList(levelManager.currentLevel - 1);
+            }
+            else
+            {
+                cantCraft = true;
+                levelManager.EndLevel(false);
+            }
         }
     }
 }
@@ -54,4 +78,12 @@ public struct Craft
     public int ingredient1;
     public int ingredient2;
     public int ingredient3;
+}
+
+[System.Serializable]
+public struct Recipe
+{
+    public Texture2D ingredient1;
+    public Texture2D ingredient2;
+    public Texture2D ingredient3;
 }

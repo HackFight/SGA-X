@@ -438,6 +438,7 @@ GameObject:
   - component: {fileID: 8411646201777368601}
   - component: {fileID: 7586574864634607612}
   - component: {fileID: 2283407783086752602}
+  - component: {fileID: 1738745808632697794}
   - component: {fileID: 1705041322849646278}
   m_Layer: 8
   m_Name: Cauldron
@@ -566,6 +567,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.3514938, y: 0.97470725}
   m_EdgeRadius: 0
+--- !u!95 &1738745808632697794
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8586390449869408632}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c23d3885b6e00ff46bc67c70f500423c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1705041322849646278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,3 +605,30 @@ MonoBehaviour:
   - ingredient1: 0
     ingredient2: 1
     ingredient3: 2
+  - ingredient1: 0
+    ingredient2: 1
+    ingredient3: 2
+  - ingredient1: 0
+    ingredient2: 1
+    ingredient3: 2
+  - ingredient1: 0
+    ingredient2: 1
+    ingredient3: 2
+  craftCooldown: 0.5
+  cantCraft: 0
+  ingredient1: {fileID: 0}
+  ingredient2: {fileID: 0}
+  ingredient3: {fileID: 0}
+  recipes:
+  - ingredient1: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+    ingredient2: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+    ingredient3: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+  - ingredient1: {fileID: 2800000, guid: 7fd35b6563889cb47a650b2f0141c85f, type: 3}
+    ingredient2: {fileID: 2800000, guid: 7fd35b6563889cb47a650b2f0141c85f, type: 3}
+    ingredient3: {fileID: 2800000, guid: 7fd35b6563889cb47a650b2f0141c85f, type: 3}
+  - ingredient1: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+    ingredient2: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+    ingredient3: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+  - ingredient1: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+    ingredient2: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+    ingredient3: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}

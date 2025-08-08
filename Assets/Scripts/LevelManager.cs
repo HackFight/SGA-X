@@ -1,9 +1,9 @@
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class LevelManager : MonoBehaviour
 {
-    InputAction menuAction;
     ItemManager itemManager;
     WallManager wallManager;
     ScriptedAnimations animationHandler;
@@ -13,44 +13,81 @@ public class LevelManager : MonoBehaviour
     [SerializeField] float reloadCooldown;
     float lastReloadTime;
 
+    //Cam
+    CinemachineCamera cineCam;
+    [SerializeField] float beginCameraSize;
+    [SerializeField] float finalCameraSize;
+
+    //Player stats
+    float playerSpeed;
+     float playerJumpSpeed;
+    [SerializeField] float beginSpeed;
+
+    //Potion stuff
+    bool hasVision;
+
     public bool levelWon;
+    public int levelAmount;
 
     void Start()
     {
-        menuAction = InputSystem.actions.FindAction("Menu");
         itemManager = GetComponent<ItemManager>();
         wallManager = GetComponent<WallManager>();
         animationHandler = GetComponent<ScriptedAnimations>();
 
-        lastReloadTime = Time.time;
-    }
+        cineCam = GameObject.FindWithTag("CinemachineCamera").GetComponent<CinemachineCamera>();
 
-    void Update()
-    {
-        
-        if (menuAction.IsPressed() && Time.time > lastReloadTime + reloadCooldown)
-        {
-            /*
-            lastReloadTime = Time.time;
-            player.Respawn();
-            itemManager.ReloadList(currentLevel);
-            wallManager.DisableList(currentLevel);
-            */
-            animationHandler.PlayCutscene(0);
-        }
+        lastReloadTime = Time.time;
+
+        playerSpeed = player.speed;
+        playerJumpSpeed = player.jumpSpeed;
+        player.speed = beginSpeed;
+        player.jumpSpeed = 0;
     }
 
     public void StartLevel()
     {
-        itemManager.ReloadList(currentLevel);
-        wallManager.DisableList(currentLevel);
-        player.cutscene = false;
+        if (currentLevel == levelAmount)
+        {
+            Debug.Log("YEEEEEEEEEEPEEEEEEEEE");
+        }
+        else
+        {
+            itemManager.ReloadList(currentLevel);
+            wallManager.DisableList(currentLevel);
+            player.Respawn();
+            animationHandler.FreeCamera();
+
+            if(currentLevel == 1)
+            {
+                JumpPotion();
+            }
+            else if (currentLevel == 2)
+            {
+                VisionPotion();
+            }
+        }
+
+        cineCam.Lens.OrthographicSize = hasVision ? finalCameraSize : beginCameraSize;
+        animationHandler.canvas.SetActive(true);
     }
 
     public void EndLevel(bool win)
     {
         levelWon = win;
+        player.LookRight();
         animationHandler.PlayCutscene(currentLevel);
         currentLevel++;
     }  
+
+    public void JumpPotion()
+    {
+        player.jumpSpeed = playerJumpSpeed;
+    }
+
+    public void VisionPotion()
+    {
+        player.speed = playerSpeed;
+        hasVision = true;
+    }
 }

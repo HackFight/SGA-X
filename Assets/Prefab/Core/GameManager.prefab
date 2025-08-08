@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3781348964194272659}
   - component: {fileID: 8142064808787970981}
   - component: {fileID: 9150418308406421865}
+  - component: {fileID: 6722712413758657570}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -53,7 +54,11 @@ MonoBehaviour:
   player: {fileID: 0}
   currentLevel: 0
   reloadCooldown: 3
+  beginCameraSize: 3.5
+  finalCameraSize: 6
+  beginSpeed: 5
   levelWon: 0
+  levelAmount: 4
 --- !u!114 &7609509726026238053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,6 +76,18 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+  - list:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - list:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - list:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
 --- !u!114 &2155949404586807693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,8 +101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemLists:
-  - list:
-    - {fileID: 0}
+  - list: []
+  - list: []
+  - list: []
+  - list: []
 --- !u!114 &3781348964194272659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,13 +118,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   custsceneCameraTarget: {fileID: 6039386203290029618}
-  cutscenes:
-  - {fileID: 11400000, guid: c7c594150765c974e9fe3a0750bcb097, type: 2}
-  deathCutscene: {fileID: 0}
-  winCutscene: {fileID: 0}
+  cutsceneLensSize: 2
+  cutscene: {fileID: 11400000, guid: c7c594150765c974e9fe3a0750bcb097, type: 2}
+  starts:
+  - {fileID: 11400000, guid: 89a318c64780a3a43a35b4e0afbfb1a2, type: 2}
+  - {fileID: 11400000, guid: 89a318c64780a3a43a35b4e0afbfb1a2, type: 2}
+  - {fileID: 11400000, guid: 89a318c64780a3a43a35b4e0afbfb1a2, type: 2}
+  - {fileID: 11400000, guid: 89a318c64780a3a43a35b4e0afbfb1a2, type: 2}
+  deathCutscene: {fileID: 11400000, guid: ee290e3ee20e8984c9531a47ed922815, type: 2}
   potionSpriteRenderer: {fileID: 0}
   potionSprites:
-  - {fileID: 21300000, guid: 51880cc1f5229d745ba1cf5bb7992a3e, type: 3}
+  - {fileID: 21300000, guid: 5c557880510bd294b8b02ccd4249df9b, type: 3}
+  - {fileID: 21300000, guid: 50c5bb115a4d27743a9ac0eb5522fedd, type: 3}
+  - {fileID: 21300000, guid: 9830776154f25b041a3f586d90d46872, type: 3}
+  - {fileID: 21300000, guid: d7d6d16b733ceb542a4d2e6c80ee699c, type: 3}
+  canvas: {fileID: 0}
 --- !u!320 &8142064808787970981
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -123,6 +150,30 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -7632443260815984698, guid: c7c594150765c974e9fe3a0750bcb097, type: 2}
     value: {fileID: 9150418308406421865}
+  - key: {fileID: -1350084283462087191, guid: c7c594150765c974e9fe3a0750bcb097, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -4211580825195433804, guid: c7c594150765c974e9fe3a0750bcb097, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 4739580024061871102, guid: ee290e3ee20e8984c9531a47ed922815, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 2461973667815575336, guid: ee290e3ee20e8984c9531a47ed922815, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 4160949375798842569, guid: ee290e3ee20e8984c9531a47ed922815, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -4980791839684848315, guid: ee290e3ee20e8984c9531a47ed922815, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3495859504944699530, guid: ee290e3ee20e8984c9531a47ed922815, type: 2}
+    value: {fileID: 9150418308406421865}
+  - key: {fileID: 8231795718313746204, guid: 89a318c64780a3a43a35b4e0afbfb1a2, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8262638589813562824, guid: 89a318c64780a3a43a35b4e0afbfb1a2, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 6481035950241187226, guid: 89a318c64780a3a43a35b4e0afbfb1a2, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -3813968315195826414, guid: 89a318c64780a3a43a35b4e0afbfb1a2, type: 2}
+    value: {fileID: 9150418308406421865}
+  - key: {fileID: 8806108112558059788, guid: 89a318c64780a3a43a35b4e0afbfb1a2, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &9150418308406421865
@@ -140,6 +191,7 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: f3d0489656a090841b705e6133512b86, type: 2}
+    - {fileID: 11400000, guid: 212d75a8346acbc49bba4b20066c0207, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -155,6 +207,33 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2520671085307168305}
+          m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+          m_MethodName: StartLevel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &6722712413758657570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7886898255502212492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd445afc2e2ff0244866a2fccf578bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
 --- !u!1 &8201094378428778334
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +259,7 @@ Transform:
   m_GameObject: {fileID: 8201094378428778334}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

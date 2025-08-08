@@ -11,6 +11,7 @@ public class ScriptedAnimations : MonoBehaviour
     //Cam
     CinemachineCamera cineCam;
     public Transform custsceneCameraTarget;
+    [SerializeField] float cutsceneLensSize;
 
     //Player
     GameObject player;
@@ -18,9 +19,9 @@ public class ScriptedAnimations : MonoBehaviour
 
     //Timeline
     PlayableDirector playableDirector;
-    [SerializeField] List<TimelineAsset> cutscenes = new List<TimelineAsset>();
+    [SerializeField] TimelineAsset cutscene;
+    [SerializeField] List<TimelineAsset> starts = new List<TimelineAsset>();
     [SerializeField] TimelineAsset deathCutscene;
-    [SerializeField] TimelineAsset winCutscene;
 
     //Cauldron
     public SpriteRenderer potionSpriteRenderer;
@@ -28,6 +29,7 @@ public class ScriptedAnimations : MonoBehaviour
 
     //Other
     LevelManager levelManager;
+    public GameObject canvas;
 
     private void Start()
     {
@@ -41,19 +43,30 @@ public class ScriptedAnimations : MonoBehaviour
 
     public void PlayCutscene(int level)
     {
-        playableDirector.playableAsset = cutscenes[level];
+        //Camera
         cineCam.Target.TrackingTarget = custsceneCameraTarget;
+        cineCam.Lens.OrthographicSize = cutsceneLensSize;
+
+        //Player
         playerController.cutscene = true;
         playerController.Respawn();
+
+        //Potion
         potionSpriteRenderer.sprite = potionSprites[level];
+
+        //Cutscene
+        playableDirector.playableAsset = cutscene;
         playableDirector.Play();
+
+        //Canvas
+        canvas.SetActive(false);
     }
 
     public void EndCutscene()
     {
         if (levelManager.levelWon)
         {
-            playableDirector.playableAsset = winCutscene;
+            playableDirector.playableAsset = starts[levelManager.currentLevel - 1];
             playableDirector.Play();
         }
         else
