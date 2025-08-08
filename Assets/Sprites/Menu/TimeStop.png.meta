@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 2e61ece2cdbd1ea4986e61437706ceca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4333333906844549415
+    second: TimeStop_0
+  - first:
+      213: 5313452620575389779
+    second: TimeStop_1
+  - first:
+      213: -1888652818821338022
+    second: TimeStop_2
+  - first:
+      213: 7006970768245796102
+    second: TimeStop_3
+  - first:
+      213: 270857035490855851
+    second: TimeStop_4
+  - first:
+      213: 5563569627874655264
+    second: TimeStop_5
+  - first:
+      213: -9026351720755237914
+    second: TimeStop_6
+  - first:
+      213: -8358490342502720007
+    second: TimeStop_7
+  - first:
+      213: -7036393396149392901
+    second: TimeStop_8
+  - first:
+      213: -9064994452291614482
+    second: TimeStop_9
+  - first:
+      213: -5313830465674396199
+    second: TimeStop_10
+  - first:
+      213: 8020194814723675170
+    second: TimeStop_11
+  - first:
+      213: 2557922543317831025
+    second: TimeStop_12
+  - first:
+      213: -3954073026556682685
+    second: TimeStop_13
+  - first:
+      213: -1678083242073063049
+    second: TimeStop_14
+  - first:
+      213: -1416847047499397657
+    second: TimeStop_15
+  - first:
+      213: 2891497004742763734
+    second: TimeStop_16
+  - first:
+      213: -753715028935435913
+    second: TimeStop_17
+  - first:
+      213: -521825101093056463
+    second: TimeStop_18
+  - first:
+      213: -476817744081979894
+    second: TimeStop_19
+  - first:
+      213: 5465694944166277464
+    second: TimeStop_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TimeStop_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9deff5d45c7ecd3c0800000000000000
+      internalID: -4333333906844549415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 66
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358b34ca10d2db940800000000000000
+      internalID: 5313452620575389779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_2
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 66
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c2d1e84482ac5e0800000000000000
+      internalID: -1888652818821338022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_3
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 66
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60d26d80ac2cd3160800000000000000
+      internalID: 7006970768245796102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_4
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 66
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab0959e90742c300800000000000000
+      internalID: 270857035490855851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_5
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 66
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02cfe987915c53d40800000000000000
+      internalID: 5563569627874655264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 42
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ebe5a20fe4fbb280800000000000000
+      internalID: -9026351720755237914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 19
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fd9794915da00c80800000000000000
+      internalID: -8358490342502720007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 19
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf96c929c75b95e90800000000000000
+      internalID: -7036393396149392901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 42
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee88544f29ba23280800000000000000
+      internalID: -9064994452291614482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_10
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 42
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dd34d8685b7146b0800000000000000
+      internalID: -5313830465674396199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_11
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 19
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 224d801f0b47d4f60800000000000000
+      internalID: 8020194814723675170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_12
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 9
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17d4c6d20019f7320800000000000000
+      internalID: 2557922543317831025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_13
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 42
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e922c288f4029c0800000000000000
+      internalID: -3954073026556682685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77103b4ae2046b8e0800000000000000
+      internalID: -1678083242073063049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_15
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 9
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e5ccb8fd19565ce0800000000000000
+      internalID: -1416847047499397657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_16
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 9
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d46cccb439a02820800000000000000
+      internalID: 2891497004742763734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_17
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 9
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7791e6eac244a85f0800000000000000
+      internalID: -753715028935435913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_18
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 9
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1305776d5da12c8f0800000000000000
+      internalID: -521825101093056463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_19
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 7
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a06f36db9c00269f0800000000000000
+      internalID: -476817744081979894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeStop_20
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 9
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 851fdadd79c0adb40800000000000000
+      internalID: 5465694944166277464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TimeStop_0: -4333333906844549415
+      TimeStop_1: 5313452620575389779
+      TimeStop_10: -5313830465674396199
+      TimeStop_11: 8020194814723675170
+      TimeStop_12: 2557922543317831025
+      TimeStop_13: -3954073026556682685
+      TimeStop_14: -1678083242073063049
+      TimeStop_15: -1416847047499397657
+      TimeStop_16: 2891497004742763734
+      TimeStop_17: -753715028935435913
+      TimeStop_18: -521825101093056463
+      TimeStop_19: -476817744081979894
+      TimeStop_2: -1888652818821338022
+      TimeStop_20: 5465694944166277464
+      TimeStop_3: 7006970768245796102
+      TimeStop_4: 270857035490855851
+      TimeStop_5: 5563569627874655264
+      TimeStop_6: -9026351720755237914
+      TimeStop_7: -8358490342502720007
+      TimeStop_8: -7036393396149392901
+      TimeStop_9: -9064994452291614482
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
