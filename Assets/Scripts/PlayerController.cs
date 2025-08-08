@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
 
     //Animations
     public bool cutscene;
+    public bool pause;
 
     void Start()
     {
@@ -106,6 +107,7 @@ public class PlayerController : MonoBehaviour
         {
             grab.SetActive(true);
         }
+        if (pause) return;
         //Check
         if (Physics2D.Raycast(transform.position, -Vector2.up, groundRaycastDistance, groundRaycastLayerMask) && rb.linearVelocityY <= 0 && !isGrounded)
         {

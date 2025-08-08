@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 
 public class LevelManager : MonoBehaviour
 {
-    InputAction menuAction;
     ItemManager itemManager;
     WallManager wallManager;
     ScriptedAnimations animationHandler;
@@ -25,7 +24,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] float beginSpeed;
 
     //Potion stuff
-    bool hasJump;
     bool hasVision;
 
     public bool levelWon;
@@ -33,7 +31,6 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
-        menuAction = InputSystem.actions.FindAction("Menu");
         itemManager = GetComponent<ItemManager>();
         wallManager = GetComponent<WallManager>();
         animationHandler = GetComponent<ScriptedAnimations>();
@@ -46,15 +43,6 @@ public class LevelManager : MonoBehaviour
         playerJumpSpeed = player.jumpSpeed;
         player.speed = beginSpeed;
         player.jumpSpeed = 0;
-    }
-
-    void Update()
-    {
-        
-        if (menuAction.IsPressed() && Time.time > lastReloadTime + reloadCooldown)
-        {
-            //Open menu
-        }
     }
 
     public void StartLevel()
@@ -94,7 +82,6 @@ public class LevelManager : MonoBehaviour
 
     public void JumpPotion()
     {
-        hasJump = true;
         player.jumpSpeed = playerJumpSpeed;
     }
 
