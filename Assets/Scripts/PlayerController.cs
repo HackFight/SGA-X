@@ -17,6 +17,11 @@ public class PlayerController : MonoBehaviour
     float detectThreshold = 0.01f;
     Vector2 look;
 
+    //Visuals
+    SpriteRenderer spriteRenderer;
+    [SerializeField] GameObject visuals;
+    [SerializeField] GameObject visualsFlipped;
+
     //Camera
     Camera mainCamera;
 
@@ -46,6 +51,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float grabSpeed;
     [Range(0.0f, 10.0f), SerializeField] float maxGrabDistance;
     [Range(0.0f, 10.0f), SerializeField] float minGrabDistance;
+    Animator grabAnimator;
 
     //Animations
     public bool cutscene;
@@ -63,14 +69,28 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         startPos = transform.position;
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         grabScript = grab.GetComponent<GrabScript>();
         grabRb = grab.GetComponent<Rigidbody2D>();
+        grabAnimator = grab.GetComponent<Animator>();
     }
 
     void Update()
     {
         ProcessInput();
+        if(rb.linearVelocityX > 0.1f)
+        {
+            spriteRenderer.flipX = true;
+            visuals.SetActive(false);
+            visualsFlipped.SetActive(true);
+        }
+        else if (rb.linearVelocityX < -0.1f)
+        {
+            spriteRenderer.flipX = false;
+            visuals.SetActive(true);
+            visualsFlipped.SetActive(false);
+        }
     }
 
     private void FixedUpdate()
@@ -155,13 +175,13 @@ public class PlayerController : MonoBehaviour
         if(fireAction.IsPressed())
         {
             grabScript.Activate();
+            grabAnimator.SetBool("Active", true);
             //Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);
-            grab.GetComponent<SpriteRenderer>().color = Color.green;
         }
         else
         {
+            grabAnimator.SetBool("Active", false);
             //Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
-            grab.GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
 
