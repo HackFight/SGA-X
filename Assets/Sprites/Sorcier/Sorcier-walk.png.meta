@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Texture-animation-walk_0
+      name: Sorcier-walk_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,16 +128,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f1ddbb11407b31910800000000000000
-      internalID: 1806989103610977567
+      spriteID: 89a6e28d52fdb1448a3b1775e838f4ce
+      internalID: -961291885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture-animation-walk_1
+      name: Sorcier-walk_1
       rect:
         serializedVersion: 2
         x: 32
@@ -150,16 +150,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 64164e2fc1ad49b80800000000000000
-      internalID: -8388840388015398586
+      spriteID: 4020f388f8c622240bb42461b733ff06
+      internalID: -124941320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture-animation-walk_2
+      name: Sorcier-walk_2
       rect:
         serializedVersion: 2
         x: 64
@@ -172,16 +172,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 46aa49c244ab3d720800000000000000
-      internalID: 2869842189533620836
+      spriteID: 0d3a3a3c7e2c10b4cb8cda054c608846
+      internalID: 1520230031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture-animation-walk_3
+      name: Sorcier-walk_3
       rect:
         serializedVersion: 2
         x: 96
@@ -194,16 +194,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b9a74f53356206f80800000000000000
-      internalID: -8115444389692278117
+      spriteID: d48c160d9808466449a1916ad98e0be9
+      internalID: -1195985159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture-animation-walk_4
+      name: Sorcier-walk_4
       rect:
         serializedVersion: 2
         x: 128
@@ -216,16 +216,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9a6beb0b785798880800000000000000
-      internalID: -8608219987095669079
+      spriteID: bd2f4efdb11b5c54896e66adfd24cba6
+      internalID: 1575033059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture-animation-walk_5
+      name: Sorcier-walk_5
       rect:
         serializedVersion: 2
         x: 160
@@ -238,16 +238,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7f911c24c5187b920800000000000000
-      internalID: 3006013509550021111
+      spriteID: 7e8af1b4cdfa8cb45a77a84d27ae3ec2
+      internalID: 1834320756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture-animation-walk_6
+      name: Sorcier-walk_6
       rect:
         serializedVersion: 2
         x: 192
@@ -262,8 +262,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01687b9439616f3429036e83e08b81fb
-      internalID: 2050558079
+      spriteID: 0628d1802001ffc47a27fc8f4dbfcbe4
+      internalID: 274285
       vertices: []
       indices: 
       edges: []
@@ -282,15 +282,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":9.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Texture-animation-walk_0: 1806989103610977567
-      Texture-animation-walk_1: -8388840388015398586
-      Texture-animation-walk_2: 2869842189533620836
-      Texture-animation-walk_3: -8115444389692278117
-      Texture-animation-walk_4: -8608219987095669079
-      Texture-animation-walk_5: 3006013509550021111
-      Texture-animation-walk_6: 2050558079
+      Sorcier-walk_0: -961291885
+      Sorcier-walk_1: -124941320
+      Sorcier-walk_2: 1520230031
+      Sorcier-walk_3: -1195985159
+      Sorcier-walk_4: 1575033059
+      Sorcier-walk_5: 1834320756
+      Sorcier-walk_6: 274285
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
