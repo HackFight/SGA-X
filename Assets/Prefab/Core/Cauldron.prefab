@@ -605,3 +605,30 @@ MonoBehaviour:
   - ingredient1: 0
     ingredient2: 1
     ingredient3: 2
+  - ingredient1: 0
+    ingredient2: 1
+    ingredient3: 2
+  - ingredient1: 0
+    ingredient2: 1
+    ingredient3: 2
+  - ingredient1: 0
+    ingredient2: 1
+    ingredient3: 2
+  craftCooldown: 0.5
+  cantCraft: 0
+  ingredient1: {fileID: 0}
+  ingredient2: {fileID: 0}
+  ingredient3: {fileID: 0}
+  recipes:
+  - ingredient1: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+    ingredient2: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+    ingredient3: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+  - ingredient1: {fileID: 2800000, guid: 7fd35b6563889cb47a650b2f0141c85f, type: 3}
+    ingredient2: {fileID: 2800000, guid: 7fd35b6563889cb47a650b2f0141c85f, type: 3}
+    ingredient3: {fileID: 2800000, guid: 7fd35b6563889cb47a650b2f0141c85f, type: 3}
+  - ingredient1: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+    ingredient2: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+    ingredient3: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+  - ingredient1: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+    ingredient2: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
+    ingredient3: {fileID: 2800000, guid: ca77cfaeed64b49489668836abd0ef4f, type: 3}
