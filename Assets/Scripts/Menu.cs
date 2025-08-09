@@ -1,11 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
     public GameObject MainMenu;
     public GameObject CreditsMenu;
+    public EventSystem eventSystem;
+    public GameObject backButton;
+    public GameObject playButton;
 
 
 
@@ -17,8 +20,7 @@ public class Menu : MonoBehaviour
 
     public void PlayNowButton()
     {
-        // Play Now Button has been pressed, here you can initialize your game (For example Load a Scene called GameLevel etc.)
-        UnityEngine.SceneManagement.SceneManager.LoadScene("TestJerome");
+        SceneManager.LoadScene(1);
     }
 
     public void CreditsButton()
@@ -27,6 +29,7 @@ public class Menu : MonoBehaviour
         Credits.text.credit = true;
         MainMenu.SetActive(false);
         CreditsMenu.SetActive(true);
+        eventSystem.SetSelectedGameObject(backButton);
     }
 
     public void MainMenuButton()
@@ -34,6 +37,7 @@ public class Menu : MonoBehaviour
         // Show Main Menu
         MainMenu.SetActive(true);
         CreditsMenu.SetActive(false);
+        eventSystem.SetSelectedGameObject(playButton);
     }
 
     public void QuitButton()

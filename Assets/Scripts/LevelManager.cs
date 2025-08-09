@@ -1,6 +1,7 @@
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -49,7 +50,7 @@ public class LevelManager : MonoBehaviour
     {
         if (currentLevel == levelAmount)
         {
-            Debug.Log("YEEEEEEEEEEPEEEEEEEEE");
+            SceneManager.LoadScene(4);
         }
         else
         {
@@ -89,5 +90,10 @@ public class LevelManager : MonoBehaviour
     {
         player.speed = playerSpeed;
         hasVision = true;
+    }
+
+    public void LoadGameOver()
+    {
+        SceneManager.LoadScene(3);
     }
 }
