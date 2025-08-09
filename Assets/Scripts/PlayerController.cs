@@ -23,6 +23,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject visualsFlipped;
     Animator playerAnimator;
 
+    //Audio
+    [SerializeField] AudioSource runAudioSource;
+    [SerializeField] AudioSource jumpAudioSource;
+
     //Camera
     Camera mainCamera;
 
@@ -84,22 +88,36 @@ public class PlayerController : MonoBehaviour
         ProcessInput();
         if(rb.linearVelocityX > 0.1f)
         {
+            if (!runAudioSource.isPlaying && isGrounded)
+            {
+                runAudioSource.Play();
+            }
             LookRight();
         }
         else if (rb.linearVelocityX < -0.1f)
         {
+            if (!runAudioSource.isPlaying && isGrounded)
+            {
+                runAudioSource.Play();
+            }
             LookLeft();
         }
         else
         {
+            runAudioSource.Pause();
             playerAnimator.SetBool("Walking", false);
         }
+
+        if(!isGrounded) runAudioSource.Pause();
     }
 
     private void FixedUpdate()
     {
         if (cutscene)
         {
+            runAudioSource.Pause();
+            playerAnimator.SetBool("Walking", false);
+            rb.linearVelocityX = 0;
             grab.SetActive(false);
             return;
         }
@@ -133,6 +151,10 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = false; hasReleased = false;
             rb.linearVelocityY = jumpSpeed;
+            if (jumpSpeed > 0)
+            {
+                jumpAudioSource.Play();
+            }
         }
 
         endedJumpEarly = !jumpAction.IsPressed() && rb.linearVelocityY > 0;

@@ -18,14 +18,21 @@ public class Cauldron : MonoBehaviour
     [SerializeField] RawImage ingredient3;
     [SerializeField] List<Recipe> recipes = new List<Recipe>();
 
+    //Sound
+    AudioSource audioSource;
+    [SerializeField] AudioClip[] splashes = new AudioClip[3];
+
     private void Start()
     {
         levelManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<LevelManager>();
         itemManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<ItemManager>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        PlayRandomSound();
+
         if (collision.GetComponent<Item>())
         {
             ingredients.Add(collision.gameObject.GetComponent<Item>().ID);
@@ -69,6 +76,12 @@ public class Cauldron : MonoBehaviour
                 levelManager.EndLevel(false);
             }
         }
+    }
+
+    void PlayRandomSound()
+    {
+        audioSource.clip = splashes[Random.Range(0, 2)];
+        audioSource.Play();
     }
 }
 
