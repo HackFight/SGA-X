@@ -50,7 +50,7 @@ public class LevelManager : MonoBehaviour
     {
         if (currentLevel == levelAmount)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(3);
         }
         else
         {
@@ -94,6 +94,6 @@ public class LevelManager : MonoBehaviour
 
     public void LoadGameOver()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 }

@@ -9,7 +9,7 @@ public class WallManager : MonoBehaviour
     {
         for (int j = 0; j < itemLists[i].list.Count; j++)
         {
-            itemLists[i].list[j].SetActive(false);
+            itemLists[i].list[j].SetActive(!itemLists[i].list[j].activeSelf);
         }
     }
 }
