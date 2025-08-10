@@ -109,7 +109,10 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
-  - list: []
+    - {fileID: 0}
+    - {fileID: 0}
+  - list:
+    - {fileID: 0}
   - list:
     - {fileID: 0}
 --- !u!114 &3781348964194272659
@@ -129,16 +132,16 @@ MonoBehaviour:
   cutscene: {fileID: 11400000, guid: c7c594150765c974e9fe3a0750bcb097, type: 2}
   starts:
   - {fileID: 11400000, guid: 89a318c64780a3a43a35b4e0afbfb1a2, type: 2}
-  - {fileID: 11400000, guid: 89a318c64780a3a43a35b4e0afbfb1a2, type: 2}
-  - {fileID: 11400000, guid: 89a318c64780a3a43a35b4e0afbfb1a2, type: 2}
-  - {fileID: 11400000, guid: 89a318c64780a3a43a35b4e0afbfb1a2, type: 2}
+  - {fileID: 11400000, guid: 1290e0f2c3e26cb4bafed5bc2e0d3d5f, type: 2}
+  - {fileID: 11400000, guid: 4605151825ee69944ad6b6acaa49b52e, type: 2}
+  - {fileID: 11400000, guid: c51d065b03ac96648bf519a9ca1f345c, type: 2}
   deathCutscene: {fileID: 11400000, guid: ee290e3ee20e8984c9531a47ed922815, type: 2}
   potionSpriteRenderer: {fileID: 0}
   potionSprites:
   - {fileID: 21300000, guid: 5c557880510bd294b8b02ccd4249df9b, type: 3}
   - {fileID: 21300000, guid: 50c5bb115a4d27743a9ac0eb5522fedd, type: 3}
   - {fileID: 21300000, guid: 9830776154f25b041a3f586d90d46872, type: 3}
-  - {fileID: 21300000, guid: d7d6d16b733ceb542a4d2e6c80ee699c, type: 3}
+  - {fileID: -2324763549778601606, guid: dd7afa494b75eef4f91c1c5d103112e8, type: 3}
   canvas: {fileID: 0}
 --- !u!320 &8142064808787970981
 PlayableDirector:
@@ -181,8 +184,11 @@ PlayableDirector:
     value: {fileID: 9150418308406421865}
   - key: {fileID: 8806108112558059788, guid: 89a318c64780a3a43a35b4e0afbfb1a2, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -5150923754223061592, guid: c7c594150765c974e9fe3a0750bcb097, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
+    - f0c1784bda6d7f1489615d96232310c2: {fileID: 0}
     - 42f11c92e581ebb4694dc472161445fa: {fileID: 0}
 --- !u!114 &9150418308406421865
 MonoBehaviour:
@@ -270,7 +276,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 458dd8822518c4f37bc3edba9b6c57d9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0

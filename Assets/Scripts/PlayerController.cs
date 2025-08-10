@@ -115,6 +115,7 @@ public class PlayerController : MonoBehaviour
     {
         if (cutscene)
         {
+            Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
             runAudioSource.Pause();
             playerAnimator.SetBool("Walking", false);
             rb.linearVelocityX = 0;
@@ -125,7 +126,11 @@ public class PlayerController : MonoBehaviour
         {
             grab.SetActive(true);
         }
-        if (pause) return;
+        if (pause)
+        {
+            Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
+            return;
+        }
         //Check
         if (Physics2D.Raycast(transform.position, -Vector2.up, groundRaycastDistance, groundRaycastLayerMask) && rb.linearVelocityY <= 0 && !isGrounded)
         {
@@ -202,12 +207,12 @@ public class PlayerController : MonoBehaviour
         {
             grabScript.Activate();
             grabAnimator.SetBool("Active", true);
-            //Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);
+            Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);
         }
         else
         {
             grabAnimator.SetBool("Active", false);
-            //Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
+            Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
         }
     }
 

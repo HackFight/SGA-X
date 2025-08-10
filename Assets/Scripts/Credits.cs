@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Credits : MonoBehaviour
 {
-
+    [SerializeField] float anchorX;
     public float scrollSpeed = 40f;
 
     public bool credit = false;
@@ -16,7 +16,7 @@ public class Credits : MonoBehaviour
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-        rectTransform.anchoredPosition = new Vector2(-533, -596);
+        rectTransform.anchoredPosition = new Vector2(anchorX, -596);
     }
 
     private void Awake()
@@ -30,7 +30,7 @@ public class Credits : MonoBehaviour
         if (credit)
         {
             credit = false;
-            rectTransform.anchoredPosition = new Vector2(-533, -596);
+            rectTransform.anchoredPosition = new Vector2(anchorX, -596);
         }
 
         rectTransform.anchoredPosition += new Vector2(0, scrollSpeed * Time.deltaTime);
